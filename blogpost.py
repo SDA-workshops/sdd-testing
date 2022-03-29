@@ -34,3 +34,9 @@ class BlogPostHistory:
 
     def get_properties(self):
         return self._title, self._desc
+
+    print("Hello")
+    
+
+
+
