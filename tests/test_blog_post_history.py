@@ -23,7 +23,7 @@ class TestBlogPostHistory(unittest.TestCase):
         blogpost.change_description(expected_description)
 
 
-        self.assertEqual(blogpost.description(), expected_description)
+        self.assertEqual(blogpost.description() , expected_description)
         blogpost.save.assert_called_once_with()
 
     def test_change_title_should_raise_on_os_error(self):
