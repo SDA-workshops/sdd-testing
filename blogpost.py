@@ -11,9 +11,6 @@ class BlogPostHistory:
             data = f"{self._title}{self.SEPARATOR}{self._desc}\n"
             f.write(data)
 
-    @property
-    def title(selfself):
-
     def change_title(self, title):
         self._title = title
         try:
