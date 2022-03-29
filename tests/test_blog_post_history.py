@@ -12,8 +12,8 @@ class TestBlogPostHistory(unittest.TestCase):
 
         blogpost.change_title(expected_title)
 
-        title, desc = blogpost.get_properties()
-        self.assertEqual(title, expected_title)
+
+        self.assertEqual(blogpost.title, expected_title)
         blogpost.save.assert_called_once_with()
 
     def test_change_description_should_change_description(self):
@@ -21,10 +21,12 @@ class TestBlogPostHistory(unittest.TestCase):
         expected_description = "Some description"
         blogpost.save = Mock()
 
-        blogpost.change_description(expected_description)
 
-        title, desc = blogpost.get_properties()
-        self.assertEqual(desc, expected_description)
+        blogpost.change_description(expected_description)
+        blogpost.title()
+
+
+        self.assertEqual(blogpost.description, expected_description)
         blogpost.save.assert_called_once_with()
 
     def test_change_title_should_raise_on_os_error(self):
