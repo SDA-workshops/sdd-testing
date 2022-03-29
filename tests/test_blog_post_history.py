@@ -12,7 +12,7 @@ class TestBlogPostHistory(unittest.TestCase):
 
         blogpost.change_title(expected_title)
 
-        title, desc = blogpost.get_properties()
+
         self.assertEqual(title, expected_title)
         blogpost.save.assert_called_once_with()
 
@@ -22,7 +22,7 @@ class TestBlogPostHistory(unittest.TestCase):
         blogpost.save = Mock()
 
         blogpost.change_description(expected_description)
-
+        blogpost.title
         title, desc = blogpost.get_properties()
         self.assertEqual(desc, expected_description)
         blogpost.save.assert_called_once_with()
