@@ -20,6 +20,7 @@ class TestBlogPostHistory(unittest.TestCase):
         expected_description = "Some description"
         blogpost.save = Mock()
 
+
         blogpost.change_description(expected_description)
 
         self.assertEqual(blogpost.description, expected_description)
